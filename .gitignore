@@ -6,10 +6,10 @@
 .cproject
 *.iml
 
-lib.js*
-ui.js*
+/lib.js*
+/ui.js*
 
-game-music-emu/
-milkytracker/
-openmpt/
+/game-music-emu/
+/milkytracker/
+/openmpt/
 
