@@ -1,0 +1,171 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #008080;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+#noscript_message {
+    position: fixed;
+    z-index: 999;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+#loading_message {
+    position: fixed;
+    z-index: 10;
+    background-color: cyan;
+    color: black;
+    font-weight: bold;
+}
+
+button {
+    border: 2px outset;
+    border-image-source: url('button9.png');
+    border-image-slice: 2;
+    border-image-width: 2px;
+    border-image-repeat: stretch;
+    background-color: #c0c0c0;
+    font-size: 1em;
+    color: #000000;
+}
+
+button:active {
+    border-image-source: url('buttonpress9.png');
+}
+
+button[disabled] {
+    color: #808080;
+}
+
+table {
+    width: 100%;
+}
+
+.numeric {
+    text-align: right;
+}
+
+.window, .window-dialog {
+    border: 3px outset;
+    border-image-source: url('window9.png');
+    border-image-slice: 3;
+    border-image-width: 3px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    background-color: #c0c0c0;
+    color: #000000;
+    box-shadow: 2px 2px 4px -2px #000000;
+}
+
+.window-titlebar {
+    background-color: #0000ff;
+    padding: 0.25em;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.window-content, .window-dialog {
+    padding: 0.25em;
+}
+
+.window {
+    position: absolute;
+}
+
+.window-dialog {
+    position: absolute;
+    top: 2em;
+    left: 2px;
+    display: none;
+}
+
+.window-content-row {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.buttonbar {
+    text-align: right;
+}
+
+.slider {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.slider-track {
+    border: 3px inset;
+    border-image-source: url('input9.png');
+    border-image-slice: 3;
+    border-image-width: 3px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    height: 0px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.slider-thumb {
+    border: 2px outset;
+    border-image-source: url('button9.png');
+    border-image-slice: 2;
+    border-image-width: 2px;
+    border-image-repeat: stretch;
+    width: 8px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #c0c0c0;
+}
+
+.frame-inset, hr {
+    border: 1px inset;
+    border-image-source: url('inset9.png');
+    border-image-slice: 1;
+    border-image-width: 1px;
+    border-image-repeat: stretch;
+}
+
+.frame-inset {
+    padding: 0.1em;
+}
+
+.visualizer-canvas {
+    width: 100%;
+    height: 64px;
+    background-color: black;
+}
+
+.buttons-bar {
+    text-align: right;
+}
+
+.button-dialog {
+    min-width: 5em;
+}
+
+.button-player {
+    width: 2em;
+    height: 2em;
+}
+
+.button-toolbar {
+    min-width: 5em;
+    min-height: 2em;
+}
+
+.spacer-inline {
+    width: 0.25em;
+    display: inline-block;
+}
+
+.slider-volume {
+    display: inline-block;
+    width: 5em;
+}

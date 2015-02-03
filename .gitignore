@@ -1,0 +1,15 @@
+*~
+
+.idea/
+.settings/
+.project
+.cproject
+*.iml
+
+lib.js*
+ui.js*
+
+game-music-emu/
+milkytracker/
+openmpt/
+

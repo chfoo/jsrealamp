@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<title>JSRealAmp</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+<noscript>
+    <div id="noscript_message">
+        This program cannot be run without JavaScript.
+    </div>
+</noscript>
+<div id="loading_message">
+    Loading...
+</div>
+
+<div id="player_window" class="window">
+    <div class="window-titlebar" data-id="titlebar">JSRealAmp</div>
+    <div class="window-content" data-id="content">
+        <div class="window-content-row">
+            <button class="button-toolbar" data-id="open_button">Open</button>
+            <button class="button-toolbar" data-id="about_button">About</button>
+        </div>
+        <div data-id="visualizer">
+            <canvas class="visualizer-canvas" data-id="visualizer_canvas"></canvas>
+        </div>
+        <div class="window-content-row frame-inset">
+            <span data-id="track_index" aria-label="Track index"></span>.
+            <span data-id="track_title" aria-label="Track title"></span> -
+            <span data-id="track_author" aria-label="Track author"></span> -
+            <span data-id="track_album" aria-label="Album name"></span><br>
+            <span data-id="duration" aria-label="Duration"></span> /
+            <span data-id="track_length" aria-label="Track length"></span>
+        </div>
+        <div class="window-content-row slider" role="slider" data-id="seek_bar">
+            <div class="slider-track"></div>
+            <div class="slider-thumb" data-id="slider_thumb" tabindex="0"></div>
+        </div>
+        <div class="window-content-row">
+            <button class="button-player" data-id="play_button" disabled aria-label="Play" title="Play"><i class="fa fa-play"></i></button>
+            <button class="button-player" data-id="pause_button" disabled aria-label="Pause" title="Pause"><i class="fa fa-pause"></i></button>
+            <span class="spacer-inline" role="separator"></span>
+            <button class="button-player" data-id="previous_button" disabled aria-label="Previous track" title="Previous track"><i class="fa fa-fast-backward"></i></button>
+            <button class="button-player" data-id="next_button" disabled aria-label="Next track" title="Next track"><i class="fa fa-fast-forward"></i></button>
+            <span class="spacer-inline" role="separator"></span>
+            <div class="slider slider-volume" role="slider" data-id="volume_slider">
+                <div class="slider-track"></div>
+                <div class="slider-thumb" data-id="slider_thumb" tabindex="0"></div>
+            </div>
+        </div>
+        <details class="window-content-row" data-id="playlist_details">
+            <summary>Playlist (<span data-id="track_count"></span>)</summary>
+            <table data-id="playlist_table">
+                <thead>
+                <tr>
+                    <th>Track</th>
+                    <th>Title</th>
+                    <th>Length</th>
+                </tr>
+                </thead>
+                <tbody data-id="playlist_table_body">
+                </tbody>
+            </table>
+        </details>
+    </div>
+    <div class="window-dialog" data-id="open_dialog">
+        <p><strong>Open file</strong></p>
+        <p>
+            Upload: <input type="file" data-id="file_input">
+        </p>
+        <p>
+            URL: <input type="url" data-id="url_input">
+        </p>
+        <p>
+            Example:
+            <select data-id="example_select">
+                <option>(none)</option>
+            </select>
+        </p>
+        <div class="buttons-bar" data-id="button_bar">
+            <button class="button-dialog" data-value="dismiss">Dismiss</button>
+            <button class="button-dialog" data-value="open">Open</button>
+        </div>
+    </div>
+    <div class="window-dialog" data-id="message_dialog">
+        <p><strong data-id="message"></strong></p>
+        <p data-id="secondary-message"></p>
+        <div class="buttonbar" data-id="button_bar">
+            <button data-value="dismiss">Dismiss</button>
+        </div>
+    </div>
+    <div class="window-dialog" data-id="about_dialog">
+        <p><strong>JSRealAmp 0.1 (Free 30 Day Trial Edition)</strong></p>
+        <p>Music player in pure JavaScript.</p>
+        <p>By Christopher Foo</p>
+        <p><a href="https://github.com/chfoo/jsrealamp">Homepage</a></p>
+        <hr>
+        Powered By:
+        <ul>
+            <li><a href="http://emscripten.org">Emscripten</a></li>
+            <li><a href="http://haxe.org/">Haxe</a></li>
+            <li><a href="https://code.google.com/p/game-music-emu/">Game Music Emu</a></li>
+            <li><a href="http://lib.openmpt.org/libopenmpt/">OpenMPT</a></li>
+        </ul>
+        <div class="buttonbar" data-id="button_bar">
+            <button data-value="dismiss">Dismiss</button>
+        </div>
+    </div>
+</div>
+<script src="lib.js"></script>
+<script src="ui.js"></script>
+<script>
+    var player = new JSRealAmp("player_window");
+</script>
+</body>
+</html>
