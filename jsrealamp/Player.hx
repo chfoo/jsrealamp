@@ -144,7 +144,7 @@ class Player {
     }
 
     function getEngine(filename:String, fileData:ArrayBuffer):Engine {
-        var extension = filename.substr(filename.lastIndexOf("."), 6).toLowerCase();
+        var extension = filename.substr(filename.lastIndexOf(".") + 1, 6).toLowerCase();
 
         trace(extension);
 
