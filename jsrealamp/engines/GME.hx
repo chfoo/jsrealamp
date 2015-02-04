@@ -46,7 +46,7 @@ class GME implements Engine {
         checkError();
 
         this.numBufferSamples = numBufferSamples;
-        emscriptenBufferPointer = Emscripten.malloc(numBufferSamples * BYTES_PER_SAMPLE);
+        emscriptenBufferPointer = Emscripten.malloc(numBufferSamples * BYTES_PER_SAMPLE * CHANNELS);
     }
 
     public function close() {
